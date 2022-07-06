@@ -1,0 +1,43 @@
+plugins {
+    id 'war'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+//    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+//    implementation 'javax.ws.rs:jsr311-api:1.1.1'
+//    implementation 'com.sun.jersey:jersey-server:1.19.4'
+//    implementation 'com.sun.jersey:jersey-core:1.19.4'
+//    implementation 'com.sun.jersey:jersey-servlet:1.19.4'
+    implementation group: 'javax.activation', name: 'javax.activation-api', version: '1.2.0'
+
+    // https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs
+    implementation group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.15.3.Final'
+
+    // https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxb-provider
+    implementation group: 'org.jboss.resteasy', name: 'resteasy-jaxb-provider', version: '6.0.1.Final'
+
+    // https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jackson-provider
+    implementation group: 'org.jboss.resteasy', name: 'resteasy-jackson-provider', version: '3.15.3.Final'
+    // https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl
+    implementation group: 'org.codehaus.jackson', name: 'jackson-core-asl', version: '1.9.13'
+    // https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl
+    implementation group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.13'
+    // https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-jaxrs
+    implementation group: 'org.codehaus.jackson', name: 'jackson-jaxrs', version: '1.9.13'
+    // https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-xc
+    implementation group: 'org.codehaus.jackson', name: 'jackson-xc', version: '1.9.13'
+    // https://mvnrepository.com/artifact/org.jboss.spec.javax.servlet/jboss-servlet-api_4.0_spec
+    implementation group: 'org.jboss.spec.javax.servlet', name: 'jboss-servlet-api_4.0_spec', version: '2.0.0.Final'
+
+    implementation "mysql:mysql-connector-java:8.0.29"
+
+}
+
+war {
+    baseName("ServerJava")
+}
